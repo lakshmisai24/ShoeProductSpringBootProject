@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Shoe Management System</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+<h1>Shoe Management System</h1>
+<hr>
+<h2>Save Shoes</h2>
+
+<form action="#" th:action="@{/saveShoe}" th:object="${shoes}" method="post">   
+        
+           <input type="text" th:field="*{shoename}" class="form-control mb-4 col-4">  
+            <input type="text" th:field="*{price}" class="form-control mb-4 col-4">         
+            <input type="text" th:field="*{username}" class="form-control mb-4 col-4">         
+            <input type="text" th:field="*{datetime}" class="form-control mb-4 col-4">          
+            <input type="hidden" th:field="*{id}" >
+                        
+           <button type="submit" class="btn btn-info col-2">Update Shoe</button>
+</form>
+<hr>
+</div>
+</body>
+</html>
